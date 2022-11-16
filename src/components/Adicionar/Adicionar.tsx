@@ -7,17 +7,17 @@ import { UserContext } from '../../contexts/UserContext'
 export const Adicionar = () => {
   
   const closeModal = () => {
-    document.getElementById("add-modal")?.classList.toggle('hide')
-    document.getElementById("main")?.classList.toggle('blur')
-  }
+    document.getElementById("add-modal")?.classList.toggle('hide');
+    document.getElementById("main")?.classList.toggle('blur');
+  };
 
   const { register, handleSubmit } = useForm<INewUser>();
-  const { createNewUser } = useContext(UserContext)
+  const { createNewUser } = useContext(UserContext);
 
   const addUser = (data:INewUser) =>{
-    createNewUser(data)
+    createNewUser(data);
     closeModal();
-  }
+  };
 
   return (
   <AdicionarStyled>
@@ -74,5 +74,5 @@ export const Adicionar = () => {
     </form>
 
   </AdicionarStyled>
-  )
-}
+  );
+};

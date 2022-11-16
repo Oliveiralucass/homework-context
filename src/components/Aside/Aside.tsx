@@ -6,15 +6,15 @@ import { Link } from 'react-router-dom'
 
 export const Aside = () => {
   return (
-    <>
     <Container>
       <div className='logo'>
-      <Link to={"/"}><img src={logo} alt="Logo" /></Link>
+        <Link to={"/"}><img src={logo} alt="Logo" /></Link>
         <span>Admin Panel</span>
       </div>
 
       <div className='menu'>
         <span>Menu</span>
+
         <div>
           <FaUserCircle fill="#ffffff" size={18}/>
           <Link to={"/"}>Lista de Usuários</Link>
@@ -26,6 +26,5 @@ export const Aside = () => {
         </div>
       </div>
     </Container>
-    </>
-  )
-}
+  );
+};

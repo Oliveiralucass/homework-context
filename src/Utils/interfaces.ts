@@ -1,4 +1,4 @@
-import React from "react"
+import React from "react";
 
 export interface INewUser {
     nome: string,
@@ -9,8 +9,8 @@ export interface INewUser {
     nomePai: string,
     tituloEleitor: string,
     sexo: "F" | "M"
-}
+};
 
 export interface IChildren {
     children?: React.ReactNode
-}
+};

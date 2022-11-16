@@ -19,22 +19,19 @@ export const Lista:React.FC<IChildren> = () => {
 
   const navigate = useNavigate();
 
-  const { deleteUser } = useContext(DelContext)
+  const { deleteUser } = useContext(DelContext);
 
-  const [ cadastros, setCadastros ] = useState<INewUser[]> ()
-  
+  const [ cadastros, setCadastros ] = useState<INewUser[]>();
   const getData = async () =>{
     const { data } = await api.get('');
-    setCadastros(data)
-  }
-
+    setCadastros(data);
+  };
   useEffect(() =>  {
     getData();
-  }, [cadastros])
+  }, [cadastros]);
 
 
   return ( 
-    
     <Container>
       <Aside />
 
@@ -68,23 +65,22 @@ export const Lista:React.FC<IChildren> = () => {
             <tbody>
               {cadastros?.map((cadastro) => {
                 return <tr key={cadastro.cpf}>
-                    <td>{cadastro.nome}</td>
-                    <td>{cadastro.cpf}</td>
-                    <td>{cadastro.rg}</td>
-                    <td>{cadastro.cnh}</td>
-                    <td>{cadastro.nomeMae}</td>
-                    <td>{cadastro.nomePai}</td>
-                    <td>{cadastro.tituloEleitor}</td>
-                    <td>{cadastro.sexo}</td>
-                    <td>
-                      <button onClick={() => {navigate('/edit', {state: cadastro})}}><FaEdit fill='#ffffff' size={16}/></button>
-                      <button onClick={() => {deleteUser(cadastro.cpf); navigate('/')}}><FaTrashAlt fill='#ffffff' size={16}/></button>
-                    </td>
-                  </tr>
-                }
-              )}
+                  <td>{cadastro.nome}</td>
+                  <td>{cadastro.cpf}</td>
+                  <td>{cadastro.rg}</td>
+                  <td>{cadastro.cnh}</td>
+                  <td>{cadastro.nomeMae}</td>
+                  <td>{cadastro.nomePai}</td>
+                  <td>{cadastro.tituloEleitor}</td>
+                  <td>{cadastro.sexo}</td>
+                  <td>
+                    <button onClick={() => {navigate('/edit', {state: cadastro})}}><FaEdit fill='#ffffff' size={16}/></button>
+                    <button onClick={() => {deleteUser(cadastro.cpf); navigate('/')}}><FaTrashAlt fill='#ffffff' size={16}/></button>
+                  </td>
+                </tr>
+              })}
             </tbody>
-            </TabelaStyled>
+          </TabelaStyled>
         </div>
       </Main>
 
@@ -95,7 +91,6 @@ export const Lista:React.FC<IChildren> = () => {
       <div id='edit-modal' className='hide'>
         <Editar />
       </div>
-      
     </Container>
-  )
-}
+  );
+};

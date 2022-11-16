@@ -43,6 +43,7 @@ export const Container = styled.aside`
 
         }
     }
+    
     a{
         font-size: 14px;
         font-weight: 500;

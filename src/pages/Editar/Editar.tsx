@@ -7,17 +7,17 @@ import { Navigate, useLocation, useNavigate } from 'react-router-dom'
 
 export const Editar = () => {
   
-  const { state } = useLocation()
+  const { state } = useLocation();
   const navigate = useNavigate();
 
 
   const { register, handleSubmit } = useForm<INewUser>();
-  const { editUser } = useContext(EditContext)
+  const { editUser } = useContext(EditContext);
 
   const changeUser = (data:INewUser) =>{
-    editUser(data)
-    navigate('/')
-  }
+    editUser(data);
+    navigate('/');
+  };
 
   return (
   <EditarStyled>
@@ -33,7 +33,7 @@ export const Editar = () => {
 
       <div className='form-div'>
         <label htmlFor='cpf'>CPF</label>
-        <input type='text' id='cpf' required defaultValue={state?.cpf} { ...register('cpf')}/>
+        <input type='text' id='cpf' required disabled defaultValue={state?.cpf} { ...register('cpf')}/>
       </div>
 
       <div className='form-div'>
@@ -71,7 +71,6 @@ export const Editar = () => {
 
       <input type='submit' value='Editar usuário'/>
     </form>
-
   </EditarStyled>
-  )
-}
+  );
+};

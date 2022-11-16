@@ -78,8 +78,4 @@ export const AdicionarStyled = styled.div`
             font-weight: 600;
         }
     }
-
-    
-    
-    
 `

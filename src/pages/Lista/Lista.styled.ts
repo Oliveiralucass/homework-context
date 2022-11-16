@@ -13,16 +13,12 @@ export const Container = styled.div`
 `   
 
 export const Main = styled.main`
-
-    
     display: flex;
     flex-direction: column;
     background-color: var(--cor-bg);
     width: 100%;
     height: 100%;
     transition: all ease 100ms;
-    
-
 
     .header-container{
         margin-left: 21px;
@@ -32,8 +28,8 @@ export const Main = styled.main`
             color: #494949;
             font-size: 21px;
             font-weight: 500;
-        }
-    }
+        };
+    };
 
     .tabela{
         max-width: 1200px;
@@ -41,7 +37,6 @@ export const Main = styled.main`
         background-color: #FFFDFD;
         border-radius: 12px;
         
-
         .tabela-header{
             display: flex;
             justify-content: space-between;
@@ -50,8 +45,7 @@ export const Main = styled.main`
             h1{
                 font-size: 21px;
                 font-weight: 600;
-            }
-
+            };
 
             button{
                 border-radius: 49px;
@@ -63,14 +57,9 @@ export const Main = styled.main`
                 font-size: 14px;
                 font-weight: 600;
                 cursor: pointer;
-            }
-        }
-    }
-
-    
-
-   
-
+            };
+        };
+    };
 `
 
 export const TabelaStyled = styled.table`
@@ -87,9 +76,8 @@ export const TabelaStyled = styled.table`
 
         th{
             padding: 16px 0;
-        }
-      
-    }
+        };
+    };
 
     tbody{
         color: var(--cor-principal);
@@ -99,7 +87,6 @@ export const TabelaStyled = styled.table`
         
         tr{
             border-bottom: 1px solid #575757;
-           
 
             td:first-child{
                 padding-left: 20px;
@@ -109,19 +96,19 @@ export const TabelaStyled = styled.table`
                 display: flex;
                 gap: 6px;
                 padding-right: 20px;
-            }
-        }
+            };
+        };
         
         tr:last-child{
             border-bottom: none;
-        }
+        };
 
         td{
             padding: 16px 0;
             color: #575757;
             font-size: 15px;
             font-weight: 500;
-        }
+        };
 
       
         button{
@@ -131,7 +118,6 @@ export const TabelaStyled = styled.table`
             border: none;
             padding: 6px 18px;
             cursor: pointer;
-        }
-
-    }
+        };
+    };
 `

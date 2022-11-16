@@ -32,8 +32,8 @@ export const EditarStyled = styled.div`
             bottom: 30px;
             left: 90px;
             color: var(--cor-secundaria);
-        }
-    }
+        };
+    };
 
     form{
         display: flex;
@@ -50,7 +50,7 @@ export const EditarStyled = styled.div`
                 color: var(--cor-secundaria);
                 font-size: 14px;
                 font-weight: 600;
-            }
+            };
 
             input, select{
                 height: 54px;
@@ -61,8 +61,8 @@ export const EditarStyled = styled.div`
                 outline: none;
                 font-size: 14px;
                 font-weight: 600;
-            }
-        }
+            };
+        };
         
         input[type=submit]{
             align-self: center;
@@ -75,10 +75,6 @@ export const EditarStyled = styled.div`
             color: #ffffff;
             font-size: 14px;
             font-weight: 600;
-        }
-    }
-
-    
-    
-    
+        };
+    };
 `
