@@ -33,7 +33,7 @@ export const Editar = () => {
 
       <div className='form-div'>
         <label htmlFor='cpf'>CPF</label>
-        <input type='text' id='cpf' required disabled defaultValue={state?.cpf} { ...register('cpf')}/>
+        <input type='text' id='cpf' required value={state?.cpf} { ...register('cpf')}/>
       </div>
 
       <div className='form-div'>
